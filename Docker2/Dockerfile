@@ -1,0 +1,12 @@
+FROM python:3.9
+
+WORKDIR /app
+
+COPY ./tkmce.py /app
+
+RUN pip install flask
+
+EXPOSE 8060
+
+ENTRYPOINT ["python3"]
+CMD ["/app/tkmce.py"]
